@@ -1,10 +1,11 @@
 # apk反编译工具
 一键反编译apk，并使用jd-gui打开反编译的jar
 
+输出结果在apk同目录下的同名文件夹中，反编译的jar在dex2jar-outputs中
 
 ## 使用方法
 ### 方式一
-第一次安装可以添加别名
+可以添加别名
 ```
 vim /etc/profile
 

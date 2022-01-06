@@ -23,7 +23,7 @@ dex2jar_fun() {
    # 输出目录
    bb=${aa%.*}
 
-   sh $shell_dir/dex-tools-2.1/d2j-dex2jar.sh $1 -o $cc"/"jars/$bb-dex2jar.jar  --force
+   sh $shell_dir/dex-tools-2.1/d2j-dex2jar.sh $1 -o $cc"/"dex2jar-outputs/$bb-dex2jar.jar  --force
 }
 
 ##递归遍历
@@ -44,10 +44,10 @@ function read_dir() {
 
    echo "do_dex2jar"
    traverse_dir $root_dir"/"$out_put_dir dex2jar_fun
-   # sh $shell_dir/dex-tools-2.1/d2j-dex2jar.sh  $rootDir"/"$file"/"classes.dex -o $rootDir"/"$file"/"jars/classes-dex2jar.jar  --force
+   # sh $shell_dir/dex-tools-2.1/d2j-dex2jar.sh  $rootDir"/"$file"/"classes.dex -o $rootDir"/"$file"/"dex2jar-outputs/classes-dex2jar.jar  --force
 
    echo "do_JD_GUI"
-   open -a $shell_dir/jd-gui-osx-1.6.6/JD-GUI.app/ $root_dir"/"$out_put_dir"/"jars/classes-dex2jar.jar
+   open -a $shell_dir/jd-gui-osx-1.6.6/JD-GUI.app/ $root_dir"/"$out_put_dir"/"dex2jar-outputs/classes-dex2jar.jar
 
    echo "success out:" $root_dir"/"$out_put_dir
 }
